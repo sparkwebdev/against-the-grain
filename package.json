@@ -18,9 +18,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/danurbanowicz/against-the-grain/issues"
+    "url": "https://github.com/sparkwebdev/against-the-grain/issues"
   },
-  "homepage": "https://github.com/danurbanowicz/against-the-grain",
+  "homepage": "https://github.com/sparkwebdev/against-the-grain",
   "devDependencies": {
     "@11ty/eleventy": "^0.9.0",
     "luxon": "^1.19.2",
