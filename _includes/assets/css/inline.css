@@ -132,8 +132,8 @@ a[href]:hover {
 }
 @media screen and (min-width:768px) {
 	.header__title {
-		width: 150px;
-		height: 150px;
+		width: 200px;
+		height: 200px;
 		margin: var(--spacing-tiny);
 	}
 }
@@ -213,12 +213,12 @@ a[href]:hover {
 }
 @media (min-width: 768px) {
 	.banner--intro {
-		padding-top: calc(150px + 5rem);
+		padding-top: calc(200px + 5rem);
 	}
 }
 @media (min-width: 1200px) {
 	.banner--intro {
-		padding-top: calc(150px + 6rem);
+		padding-top: calc(200px + 6rem);
 	}
 }
 .banner--intro::before,
@@ -575,7 +575,7 @@ a[href]:hover {
 }
 @keyframes animatedUpDown {
 	0% { margin-top: 0; }
-	100% { margin-top: -2.5vh; }
+	100% { margin-top: -2.25vh; }
 }
 
 /* Shared - Stroked text */

@@ -9,9 +9,9 @@ navtitle: Home
   <h1 class="header__title"><span class="screen-reader-text">{{ metadata.title }}</span></h1>
   <nav class="header__nav">
     <ul>
-      <li><a href="#header">Home</a></li>
-      <li><a href="#ciders">Ciders</a></li>
-      <li><a href="#story">Story</a></li>
+      <li><a href="#header" class="js-scroll-to">Home</a></li>
+      <li><a href="#ciders" class="js-scroll-to">Ciders</a></li>
+      <li><a href="#story" class="js-scroll-to">Story</a></li>
     </ul>
   </nav>
 </header>
@@ -28,7 +28,7 @@ navtitle: Home
     </div>
 </section>
 
-<section id="ciders" class="ciders">
+<section class="ciders" id="ciders">
     <!-- <p>Our mission is pretty simple: to never be boring. We want to push boundaries and challenge the norm whilst all the while creating inspired, creative and delicious cider that we know our customers will love.</p> -->
     <ul class="ciders__list">
       <li class="ciders__list-product ciders__list-product--laid-back-lumberjack">
@@ -122,5 +122,29 @@ navtitle: Home
 </style>
 
 <script>
-console.log('started');
+function scrollTo(offset) {
+  window.scroll({
+    behavior: 'smooth',
+    top: offset
+  });
+}
+
+document.querySelector('.header__nav').addEventListener('click', (e) => {
+  var targetAnchorRef = e.target.getAttribute('href');
+  var targetAnchorRefID = targetAnchorRef.substr(1);
+  var targetElement = document.getElementById(targetAnchorRefID);
+  if (targetElement) {
+    var offset = targetElement.offsetTop;
+    if (targetAnchorRefID === "ciders") {
+      var container = document.querySelector('.ciders__list');
+      if (container) {
+        var containerStyles = getComputedStyle(container);
+        offset = offset - (containerStyles.marginTop.replace('px', ''));
+      }
+      
+    }
+    scrollTo(offset);
+  }
+  e.preventDefault();
+});
 </script>
