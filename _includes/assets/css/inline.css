@@ -21,7 +21,7 @@
 	--heading-large:   2rem;
 	--heading-xlarge:  2.4rem;
 	--heading-xxlarge: 2.8rem;
-	--heading-xxxlarge: 3.8rem;
+	--heading-xxxlarge: 4rem;
 	/* Spacing */
 	--spacing-tiny:    0.5rem;
 	--spacing-small:   1rem;
@@ -29,7 +29,7 @@
 	--spacing-large:   3rem;
 	/* Layout */
 	--container-width: 56rem;
-	--container-width-wide: 86rem;
+	--container-width-wide: 90rem;
 }
 
 *, *:before, *:after {
@@ -122,7 +122,7 @@ a[href]:hover {
 	width: 60px;
 	height: 60px;
 	margin: 0;
-	background: url(static/img/logo-against-the-grain.svg);
+	background: url(static/img/logo-against-the-grain.svg) no-repeat;
 }
 @media screen and (min-width:600px) {
 	.header__title {
@@ -150,16 +150,21 @@ a[href]:hover {
 .header__nav a[href] {
 	display: inline-block;
 	padding: var(--spacing-tiny);
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 	text-decoration: none;
 	-webkit-text-stroke-width: 0.05em;
 	-webkit-text-stroke-color: black;
 	color: var(--tone-0);
 }
+@media screen and (min-width:600px) {
+	.header__nav a[href] {
+		font-size: var(--heading-large);
+		padding: var(--spacing-tiny) var(--spacing-small);
+	}
+}
 @media screen and (min-width:1200px) {
 	.header__nav a[href] {
 		font-size: var(--heading-xlarge);
-		padding: var(--spacing-tiny) var(--spacing-small);
 	}
 }
 
@@ -178,95 +183,106 @@ a[href]:hover {
 }
 .banner__content {
     width: 100%;
-	max-width: var(--container-width);
 	padding: 0 var(--spacing-medium) var(--spacing-small) var(--spacing-medium);
 	z-index: 9;
 }
-.banner__content--wide {
-	/* max-width: var(--container-width-wide); */
-}
-.banner__content p {
-	/* font-weight: bold; */
+.banner__content--fixed {
+	max-width: var(--container-width);
 }
 @media screen and (min-width:768px) {
 	.banner__content {
 		padding: 0 var(--spacing-medium) var(--spacing-large) var(--spacing-medium);
 	}
 }
-@media screen and (min-width:1200px) {
-	.banner__content p {
-		/* font-size: 1.1rem; */
-	}
-}
-
 
 
 /* Banner - Intro */
 .banner--intro {
-	background-position: center center;
+	background-position: bottom center;
 	background-repeat: no-repeat;
-	background-size: 100% auto;
+	background-size: 100% 100%;
 	background-image: url('static/img/bg-earth-sky.jpg');
-	padding-top: 56.25%;
+	padding-top: 76px;
+	padding-bottom: 6rem;
 	position: relative;
-	border-bottom: solid 6em #C1E2F6;
+}
+@media (min-width: 600px) {
+	.banner--intro {
+		padding-top: 96px;
+	}
+}
+@media (min-width: 768px) {
+	.banner--intro {
+		padding-top: calc(150px + 5rem);
+	}
+}
+@media (min-width: 1200px) {
+	.banner--intro {
+		padding-top: calc(150px + 6rem);
+	}
 }
 .banner--intro::before,
 .banner--intro__angel-barrel,
 .banner--intro__angel-halo {
+	background-position: center center;
+	background-size: 100% auto;
+}
+.banner--intro::before {
 	content: "";
 	position: absolute;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-position: center center;
-	background-size: 100% auto;
-}
-.banner--intro::before {
 	background-image: url('static/img/bg-clouds2x.png');
 	animation: animatedBackground 50s linear infinite;
 	background-repeat: repeat-x;
 	background-position: center center;
 	z-index: 1;
 }
-
+.banner--intro__angel {
+	position: relative;
+    min-height: 375px;
+    max-height: 80vw;
+    height: 55vh;
+}
 .banner--intro__angel-halo,
 .banner--intro__angel-barrel {
+	z-index: 2;
+	width: 100%;
 	position: absolute;
-	z-index: 1;
+	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	z-index: 2;
+	background-size: auto 100%;
+	background-position: top center;
+	background-repeat: no-repeat;
 }
 .banner--intro__angel-halo {
 	background-image: url('static/img/bg-angel-halo.png');
-	animation: animatedUpDown 1.25s ease alternate infinite;
-	animation-delay: 0.2s;
+	animation: animatedUpDown 1.25s ease alternate reverse infinite;
 }
 .banner--intro__angel-barrel {
 	background-image: url('static/img/bg-angel-barrel.png');
-	animation: animatedUpDown 1.25s ease alternate infinite;
+	animation-delay: 0.6s;
+	animation: animatedUpDown 1.25s ease	 alternate infinite;
+}
+.banner--intro .banner__content {
+	z-index: 3;
+	padding: 0 0;
 }
 
 @media (min-width: 768px) {
-	.banner--intro__angel-halo {
-		animation-duration: 1s;
-	}
+	.banner--intro__angel-halo,
 	.banner--intro__angel-barrel {
 		animation-duration: 1s;
 	}
 }
-
-@media (min-width: 1200px) {
+@media (max-width: 768px) {
 	.banner--intro .strapline {
-		font-size: var(--heading-xxxlarge);	
+		font-size: 6.5vw;
 	}
-}
-
-.banner--intro .banner__content {
-	z-index: 3;
 }
 
 /* Banner - Our Story */
@@ -274,6 +290,12 @@ a[href]:hover {
 	background-position: top center;
 	background-repeat: no-repeat;
 	background-size: 100% auto;
+}
+.banner--our-story .banner__content {
+	max-width: var(--container-width);
+}
+.banner--our-story .banner__content p {
+	font-weight: bold;
 }
 @media (max-width: 600px) {
 	.banner--our-story {
@@ -314,11 +336,164 @@ a[href]:hover {
 		background-size: 1200px auto;
 		padding-top: 1001px;
 	}
+	.banner--our-story .banner__content p {
+		font-size: 1.1rem;
+	}
 }
 
+
+/* Ciders */
 .ciders {
-	display: none;
+    position: relative;
+    z-index: 1;
+	margin-top: -6rem;
 }
+.ciders__list {
+	list-style: none;
+	padding: 0 var(--spacing-medium) var(--spacing-large) var(--spacing-medium);
+	margin: 6rem auto 0 auto;
+	max-width: var(--container-width-wide);
+	text-align: center;
+	display: flex;
+    align-items: center;
+	flex-direction: column;
+	z-index: 1;
+}
+.ciders__list:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+    box-shadow: 0 3px 8px #000;
+}
+.ciders__list li {
+	max-width: 480px;
+	margin-bottom: 4em;
+}
+.ciders__list li:first-child {
+	position: relative;
+	top: -4rem;
+	margin-bottom: 0;
+}
+.ciders__list-image {
+	border-radius: 50%;
+	display: block;
+	overflow: hidden;
+	box-shadow: 0 -1px 3px 1px #888;
+}
+.ciders__list-image img {
+	display: block;
+	width: calc(100% + 4px);
+	height: auto;
+	position: relative;
+	left: -2px;
+}
+@media (min-width: 900px) {
+	.ciders__list	 {
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+	.ciders__list li {
+		width: 30%;
+		position: relative;
+		top: -4rem;
+		margin-bottom: -4rem;
+		padding: 0;
+	}
+}
+.ciders__list-title,
+.ciders__list-subtitle,
+.ciders__list li > p:last-child {
+	margin: 0;
+}
+.ciders__list-title,
+.ciders__list-subtitle {
+	transform: rotate(-5deg);
+}
+.ciders__list-title {
+	margin-top: var(--spacing-small);
+	text-transform: uppercase;
+	font-size: var(--heading-xlarge);
+	font-weight:bolder;
+	line-height: 1;
+}
+.ciders__list li > p {
+	/* margin: var(--spacing-small) 0 var(--spacing-tiny) 0; */
+	padding-left: var(--spacing-small);
+	padding-right: var(--spacing-small);
+}
+.ciders__list-product .ciders__list-subtitle,
+.ciders__description strong {
+	text-shadow: 1px 1px #000;
+}
+.ciders__list-product .ciders__list-subtitle {
+	font-size: var(--heading-medium);
+	margin-top: var(--spacing-tiny);
+	line-height: 1.2;
+}
+.ciders__list-subtitle + .ciders__list-subtitle {
+	font-size: 1.2rem;
+	transform: none;
+}
+.ciders__description strong {
+	text-transform: uppercase;
+	font-size: 1.1rem;
+}
+.ciders__list li > p:last-child {
+	margin-top: auto;
+}
+.ciders__list-product--laid-back-lumberjack .ciders__list-title,
+.ciders__list-product--laid-back-lumberjack .ciders__list-subtitle,
+.ciders__list-product--laid-back-lumberjack .ciders__description strong {
+	color: var(--brand-1a);
+}
+.ciders__list-product--gypsys-kiss .ciders__list-title,
+.ciders__list-product--gypsys-kiss .ciders__list-subtitle,
+.ciders__list-product--gypsys-kiss .ciders__description strong {
+	color: var(--brand-2a);
+}
+.ciders__list-product--hippie-tripper .ciders__list-title,
+.ciders__list-product--hippie-tripper .ciders__list-subtitle,
+.ciders__list-product--hippie-tripper .ciders__description strong {
+	color: var(--brand-3a);
+}
+.ciders__description:before {
+	content: "";
+	display: block;
+	border: solid;
+	width: 10rem;
+	margin: var(--heading-small);
+	margin-left: auto;
+	margin-right: auto;
+}
+.ciders__list-product--laid-back-lumberjack .ciders__description:before {
+	border-color: var(--brand-1a);
+}
+.ciders__list-product--gypsys-kiss .ciders__description:before {
+	border-color: var(--brand-2a);
+}
+.ciders__list-product--hippie-tripper .ciders__description:before {
+	border-color: var(--brand-3a);
+}
+@media (min-width: 768px) {
+	.ciders__list-title {
+		font-size: var(--heading-xxlarge);
+	}
+}
+
+.ciders__list-product--laid-back-lumberjack .ciders__list-image  {
+	background: linear-gradient(to top right, var(--brand-1a), var(--brand-1a) 50%, var(--brand-1b) 100%);
+}
+.ciders__list-product--gypsys-kiss .ciders__list-image  {
+	background: linear-gradient(to top right, var(--brand-2a), var(--brand-2a) 30%, var(--brand-2b) 100%);
+}
+.ciders__list-product--hippie-tripper .ciders__list-image  {
+	background: linear-gradient(to top right, var(--brand-3a), var(--brand-3a) 30%, var(--brand-3b) 100%);
+}
+
 
 
 /* Banner - Strapline */
@@ -368,12 +543,12 @@ a[href]:hover {
 	animation: animatedUpDown 1s ease alternate infinite;
 	z-index: 3;
 }
+.banner--strapline .banner__content {
+	position: absolute;
+}
 @media (min-width: 768px) {
 	.banner--strapline-barrel {
 		animation-duration: 0.75s;
-	}
-	.banner--strapline .strapline br {
-		/* display: none; */
 	}
 }
 
@@ -405,7 +580,7 @@ a[href]:hover {
 /* Shared - Stroked text */
 .stroked {
 	/* text-shadow: rgba(0,0,0,0.5) 1px 0.05em; */
-	-webkit-text-stroke-width: 0.05em;
+	-webkit-text-stroke-width: 0.04em;
 	-webkit-text-stroke-color: black;
 }
 
@@ -417,22 +592,17 @@ a[href]:hover {
 }
 @media screen and (min-width:600px) {
 	.strapline {
-		font-size: var(--heading-large);
+		font-size: var(--heading-xlarge);
 	}
 }
 @media screen and (min-width:768px) {
 	.strapline {
-		font-size: var(--heading-xlarge);
+		font-size: var(--heading-xxlarge);
 	}
 }
 @media screen and (min-width:1200px) {
 	.strapline {
 		letter-spacing: -0.01em;
-		font-size: var(--heading-xxlarge);
-	}
-}
-@media screen and (min-width:1400px) {
-	.strapline {
 		font-size: var(--heading-xxxlarge);
 	}
 }
@@ -440,7 +610,6 @@ a[href]:hover {
 
 /* Footer */
 .footer {
-	font-size: 1.1rem;
 	box-shadow: 0 0px 3px #000;
 	position: relative;
 	z-index: 11;
@@ -466,6 +635,7 @@ a[href]:hover {
 
 @media screen and (min-width:768px) {
 	.footer {
+		font-size: 1.1rem;
 		display: flex;
 		flex-wrap: wrap;
 	}
@@ -474,7 +644,7 @@ a[href]:hover {
 		padding: var(--spacing-medium);
 	}
 	.footer__links {
-		flex: 2 0 0;
+		flex: 4	 0 0;
 		display: flex;
 		justify-content: flex-end;
 		align-items: flex-end;
