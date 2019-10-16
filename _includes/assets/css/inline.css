@@ -261,13 +261,14 @@ a[href]:hover {
 }
 .banner--intro__angel-halo {
 	background-image: url('static/img/bg-angel-halo.png');
-	animation: animatedUpDown 1.25s ease alternate reverse infinite;
+	animation: animatedUpDown 1.25s ease alternate infinite;
+	animation-delay: 0.2s;
 }
 .banner--intro__angel-barrel {
 	background-image: url('static/img/bg-angel-barrel.png');
-	animation-delay: 0.6s;
-	animation: animatedUpDown 1.25s ease	 alternate infinite;
+	animation: animatedUpDown 1.25s ease alternate infinite;
 }
+
 .banner--intro .banner__content {
 	z-index: 3;
 	padding: 0 0;
@@ -574,7 +575,7 @@ a[href]:hover {
 }
 @keyframes animatedUpDown {
 	0% { margin-top: 0; }
-	100% { margin-top: -1.5vw; }
+	100% { margin-top: -2.5vh; }
 }
 
 /* Shared - Stroked text */
