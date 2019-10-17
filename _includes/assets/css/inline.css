@@ -574,8 +574,8 @@ a[href]:hover {
 	100% { background-position: 100vw 0; }
 }
 @keyframes animatedUpDown {
-	0% { margin-top: 0; }
-	100% { margin-top: -2.25vh; }
+	0% { transform: translateY(0); }
+	100% { transform: translateY(-2.25vh); }
 }
 
 /* Shared - Stroked text */
