@@ -109,12 +109,13 @@ a[href]:hover {
 	left: 0;
 	right: 0;
 	z-index: 10;
-	max-width: var(--container-width--wide);
+	max-width: var(--container-width);
+    margin: 0 auto;
 }
-@media screen and (min-width:768px) {
+@media screen and (min-width:1200px) {
 	.header {
-		left: 50%;
-		transform: translateX(-50%);
+		/* left: 50%;
+		transform: translateX(-50%); */
 		/* flex-direction: column; */
 	}
 }
@@ -153,7 +154,7 @@ a[href]:hover {
 .header__nav a[href] {
 	display: inline-block;
 	padding: var(--spacing-tiny);
-	font-size: 1.1rem;
+	font-size: 1.2rem;
 	text-decoration: none;
 	-webkit-text-stroke-width: 0.05em;
 	-webkit-text-stroke-color: black;
@@ -208,6 +209,7 @@ a[href]:hover {
 	background-image: url('static/img/bg-sky.jpg');
 	padding-top: 56.25%;
 	position: relative;
+	min-height: 70vh;
 }
 
 .banner--intro__clouds--1a,
@@ -226,6 +228,7 @@ a[href]:hover {
 .banner--intro__clouds--1b {
 	background-image: url('static/img/bg-clouds2x2.png');
 	animation: animatedBackgroundA 30s linear infinite;
+	background-repeat: no-repeat;
 }
 .banner--intro__clouds--1b {
 	animation: animatedBackgroundB 30s linear infinite;
@@ -234,6 +237,7 @@ a[href]:hover {
 .banner--intro__clouds--2b {
 	background-image: url('static/img/bg-clouds2x3.png');
 	animation: animatedBackgroundA 40s linear infinite;
+	background-repeat: no-repeat;
 }
 .banner--intro__clouds--2b {
 	animation: animatedBackgroundB 40s linear infinite;
@@ -243,6 +247,8 @@ a[href]:hover {
 	background-image: url('static/img/bg-landscape-2400x1350.png');
 	animation: animatedBackgroundA 14s linear infinite;
 	width: calc(100% + 1px);
+	background-position: left bottom;
+	background-repeat: no-repeat;
 }
 .banner--intro__landscape--b {
 	animation: animatedBackgroundB 14s linear infinite;
@@ -257,7 +263,7 @@ a[href]:hover {
 	left: 0;
 	/* transform: translateY(-50%); */
 	background-position: center center;
-    background-size: auto 100%;
+    background-size: 150% auto;
     background-repeat: no-repeat;
 	background-image: url('static/img/bg-barrel.png');
 	animation: animatedUpDown 1s ease alternate infinite;
@@ -269,6 +275,7 @@ a[href]:hover {
 @media (min-width: 768px) {
 	.banner--intro__barrel {
 		animation-duration: 0.75s;
+		background-size: auto 100%;
 	}
 }
 
@@ -357,7 +364,8 @@ a[href]:hover {
     box-shadow: 0 3px 8px #000;
 }
 .ciders__list li {
-	max-width: 480px;
+	max-width: 80vw;
+	width: 400px;
 	margin-bottom: 4em;
 }
 .ciders__list li:first-child {
@@ -373,10 +381,8 @@ a[href]:hover {
 }
 .ciders__list-image img {
 	display: block;
-	width: calc(100% + 4px);
+	width: 100%;
 	height: auto;
-	position: relative;
-	left: -2px;
 }
 @media (min-width: 900px) {
 	.ciders__list	 {
@@ -390,6 +396,7 @@ a[href]:hover {
 		top: -4rem;
 		margin-bottom: -4rem;
 		padding: 0;
+		max-width: 480px;
 	}
 }
 .ciders__list-title,
@@ -467,6 +474,16 @@ a[href]:hover {
 	border-color: var(--brand-3a);
 }
 @media (min-width: 768px) {
+	.ciders__list-title {
+		font-size: var(--heading-xxlarge);
+	}
+}
+@media (min-width: 900px) {
+	.ciders__list-title {
+		font-size: var(--heading-xlarge);
+	}
+}
+@media (min-width: 1200px) {
 	.ciders__list-title {
 		font-size: var(--heading-xxlarge);
 	}
