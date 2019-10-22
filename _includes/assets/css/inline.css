@@ -114,7 +114,7 @@ a[href]:hover {
 @media screen and (min-width:768px) {
 	.header {
 		left: 50%;
-		transform: translate(-50%);
+		transform: translateX(-50%);
 		/* flex-direction: column; */
 	}
 }
@@ -204,91 +204,74 @@ a[href]:hover {
 .banner--intro {
 	background-position: bottom center;
 	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	background-image: url('static/img/bg-earth-sky.jpg');
-	padding-top: 106px;
-	padding-bottom: 6rem;
+    background-size: cover;
+	background-image: url('static/img/bg-sky.jpg');
+	padding-top: 56.25%;
 	position: relative;
 }
-@media (min-width: 600px) {
-	.banner--intro {
-		padding-top: 136px;
-	}
-}
-@media (min-width: 768px) {
-	.banner--intro {
-		padding-top: calc(200px + 5rem);
-	}
-}
-@media (min-width: 1200px) {
-	.banner--intro {
-		padding-top: calc(200px + 6rem);
-	}
-}
-.banner--intro__angel-barrel,
-.banner--intro__angel-halo {
-	background-position: center center;
-	background-size: 100% auto;
-}
-.banner--intro__clouds-1,
-.banner--intro__clouds-2 {
+
+.banner--intro__clouds--1a,
+.banner--intro__clouds--1b,
+.banner--intro__clouds--2a,
+.banner--intro__clouds--2b,
+.banner--intro__landscape--a,
+.banner--intro__landscape--b {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background-image: url('static/img/bg-clouds2x.png');
 	background-position: left center;
 	background-size: 100% auto;
-	animation: animatedBackground 50s linear infinite;
-	transform: translateX(100%);
 }
-.banner--intro__clouds-2 {
-	animation-delay: 25s;
+.banner--intro__clouds--1a,
+.banner--intro__clouds--1b {
+	background-image: url('static/img/bg-clouds2x2.png');
+	animation: animatedBackgroundA 30s linear infinite;
 }
-.banner--intro__angel {
-	position: relative;
-    min-height: 375px;
-    max-height: 80vw;
-    height: 55vh;
+.banner--intro__clouds--1b {
+	animation: animatedBackgroundB 30s linear infinite;
 }
-.banner--intro__angel-halo,
-.banner--intro__angel-barrel {
-	z-index: 2;
+.banner--intro__clouds--2a,
+.banner--intro__clouds--2b {
+	background-image: url('static/img/bg-clouds2x3.png');
+	animation: animatedBackgroundA 40s linear infinite;
+}
+.banner--intro__clouds--2b {
+	animation: animatedBackgroundB 40s linear infinite;
+}
+.banner--intro__landscape--a,
+.banner--intro__landscape--b {
+	background-image: url('static/img/bg-landscape-2400x1350.png');
+	animation: animatedBackgroundA 14s linear infinite;
+	width: calc(100% + 1px);
+}
+.banner--intro__landscape--b {
+	animation: animatedBackgroundB 14s linear infinite;
 	width: 100%;
+}
+.banner--intro__barrel {
+	content: "";
 	position: absolute;
-	top: 0;
+	top: 15%;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-size: auto 100%;
-	background-position: top center;
-	background-repeat: no-repeat;
-}
-.banner--intro__angel-halo {
-	background-image: url('static/img/bg-angel-halo.png');
-	animation: animatedUpDown 1.25s ease alternate infinite;
-	animation-delay: 0.2s;
-}
-.banner--intro__angel-barrel {
-	background-image: url('static/img/bg-angel-barrel.png');
-	animation: animatedUpDown 1.25s ease alternate infinite;
-}
-
-.banner--intro .banner__content {
+	/* transform: translateY(-50%); */
+	background-position: center center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+	background-image: url('static/img/bg-barrel.png');
+	animation: animatedUpDown 1s ease alternate infinite;
 	z-index: 3;
-	padding: 0 0;
+}
+.banner--intro .banner__content {
+	position: absolute;
+}
+@media (min-width: 768px) {
+	.banner--intro__barrel {
+		animation-duration: 0.75s;
+	}
 }
 
-@media (min-width: 768px) {
-	.banner--intro__angel-halo,
-	.banner--intro__angel-barrel {
-		animation-duration: 1s;
-	}
-}
-@media (max-width: 768px) {
-	.banner--intro .strapline {
-		font-size: 6.5vw;
-	}
-}
 
 /* Banner - Our Story */
 .banner--our-story {
@@ -323,7 +306,7 @@ a[href]:hover {
 		right: 0;
 		bottom: 0;
 		left: 50%;
-		transform: translate(-50%);
+		transform: translateX(-50%);
 	}
 	.banner--our-story .banner__content::before {
 		background: linear-gradient(to top, black 0%, black 50%, rgba(0,0,0,0.95) 75%, rgba(0,0,0,0.75) 100%);
@@ -512,7 +495,7 @@ a[href]:hover {
 	right: 0;
 	bottom: 0;
 	left: 50%;
-	transform: translate(-50%);
+	transform: translateX(-50%);
 }
 @media (max-width: 600px) {
 	.banner--strapline {
@@ -531,75 +514,6 @@ a[href]:hover {
 }
 
 
-/* Banner - Strapline
-.banner--strapline {
-	background-position: bottom center;
-	background-repeat: no-repeat;
-    background-size: cover;
-	background-image: url('static/img/bg-sky.jpg');
-	padding-top: 56.25%;
-	position: relative;
-}
-
-.banner--strapline__clouds--1a,
-.banner--strapline__clouds--1b,
-.banner--strapline__clouds--2a,
-.banner--strapline__clouds--2b,
-.banner--strapline__landscape--a,
-.banner--strapline__landscape--b {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background-position: left center;
-	background-size: 100% auto;
-}
-.banner--strapline__clouds--1a,
-.banner--strapline__clouds--1b, {
-	background-image: url('static/img/bg-clouds2x2.png');
-	animation: animatedBackground 36s linear infinite;
-	transform: translateX(100%);
-}
-.banner--strapline__clouds--1b {
-	animation-delay: 18s;
-}
-.banner--strapline__clouds--2a,
-.banner--strapline__clouds--2b {
-	background-image: url('static/img/bg-clouds2x3.png');
-	animation: animatedBackground 40s linear infinite;
-}
-.banner--strapline__clouds--2b {
-	animation-delay: 20s;
-}
-.banner--strapline__landscape--a,
-.banner--strapline__landscape--b {
-	background-image: url('static/img/bg-landscape-2400x1350.png');
-	animation: animatedBackground 10s linear infinite ;
-}
-.banner--strapline__landscape--b {
-	animation-delay: 5s;
-}
-.banner--strapline__barrel {
-	content: "";
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background-position: bottom center;
-    background-size: cover;
-	background-image: url('static/img/bg-barrel.png');
-	animation: animatedUpDown 1s ease alternate infinite;
-	z-index: 3;
-}
-.banner--strapline .banner__content {
-	position: absolute;
-}
-@media (min-width: 768px) {
-	.banner--strapline__barrel {
-		animation-duration: 0.75s;
-	}
-}
- */
 
 /* Shared - Accessibility */
 .screen-reader-text {
@@ -616,9 +530,13 @@ a[href]:hover {
 }
 
 /* Shared - Animations */
-@keyframes animatedBackground {
-	0% { transform: translateX(100%); }
+@keyframes animatedBackgroundA {
+	0% { transform: translateX(0); }
 	100% { transform: translateX(-100%); }
+}
+@keyframes animatedBackgroundB {
+	0% { transform: translateX(100%); }
+	100% { transform: translateX(0); }
 }
 @keyframes animatedUpDown {
 	0% { transform: translateY(0); }
