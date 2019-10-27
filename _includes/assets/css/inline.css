@@ -280,6 +280,7 @@ a[href]:hover {
 }
 .banner--intro .banner__content {
 	position: absolute;
+	bottom: 4em;
 }
 @media (min-width: 768px) {
 	.banner--intro__barrel {
@@ -300,6 +301,10 @@ a[href]:hover {
 }
 .banner--our-story .banner__content p {
 	font-weight: bold;
+}
+.banner--our-story .strapline {
+	font-family: var(--font-copy);
+	font-weight: normal;
 }
 @media (max-width: 600px) {
 	.banner--our-story {
@@ -532,6 +537,10 @@ a[href]:hover {
 	bottom: 0;
 	left: 50%;
 	transform: translateX(-50%);
+}
+.banner--strapline .strapline {
+	font-family: var(--font-copy);
+	font-weight: normal;
 }
 @media (max-width: 600px) {
 	.banner--strapline {
