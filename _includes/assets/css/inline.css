@@ -13,8 +13,8 @@
 	--brand-3a: #e462c2;
 	--brand-3b: #dc393f;
 	/* Font family */
-	--font-heading:   "bernhard-gothic-urw", sans-serif;
-	--font-copy:      "fira-sans", sans-serif;
+	--font-heading:   "Permanent Marker", sans-serif;
+	--font-copy:      "Quicksand", sans-serif;
 	/* Font size */
 	--heading-small:   1.3rem;
 	--heading-medium:  1.6rem;
@@ -52,6 +52,10 @@ body {
 	grid-template-rows: auto 1fr auto;
 	line-height: 1.618;
 }
+
+html {
+	scroll-behavior: smooth;
+}
 h1, h2, h3 {
 	font-family: var(--font-heading);
 }
@@ -84,7 +88,7 @@ a[href],
 a[href]:visited {
 	color: var(--brand-3a);
 	font-weight: bold;
-	font-family: var(--font-heading);
+	/* font-family: var(--font-heading); */
 	text-decoration: underline;
 }
 
@@ -112,11 +116,15 @@ a[href]:hover {
 	max-width: var(--container-width);
     margin: 0 auto;
 }
-@media screen and (min-width:1200px) {
+@media screen and (min-width:768px) {
 	.header {
+		justify-content: center;
 		/* left: 50%;
 		transform: translateX(-50%); */
 		/* flex-direction: column; */
+	}
+	.header__nav {
+		margin-left: var(--spacing-medium);
 	}
 }
 
@@ -156,9 +164,10 @@ a[href]:hover {
 	padding: var(--spacing-tiny);
 	font-size: 1.2rem;
 	text-decoration: none;
-	-webkit-text-stroke-width: 0.05em;
+	-webkit-text-stroke-width: 0.03em;
 	-webkit-text-stroke-color: black;
 	color: var(--tone-0);
+	font-family: var(--font-heading);
 }
 @media screen and (min-width:600px) {
 	.header__nav a[href] {
@@ -398,6 +407,15 @@ a[href]:hover {
 		padding: 0;
 		max-width: 480px;
 	}
+	.ciders__list-product--laid-back-lumberjack {
+		order: 2;
+	}
+	.ciders__list-product--gypsys-kiss {
+		order: 1;
+	}
+	.ciders__list-product--hippie-tripper {
+		order: 3;
+	}
 }
 .ciders__list-title,
 .ciders__list-subtitle,
@@ -440,6 +458,7 @@ a[href]:hover {
 .ciders__list li > p:last-child {
 	margin-top: auto;
 }
+
 .ciders__list-product--laid-back-lumberjack .ciders__list-title,
 .ciders__list-product--laid-back-lumberjack .ciders__list-subtitle,
 .ciders__list-product--laid-back-lumberjack .ciders__description strong {
@@ -563,7 +582,7 @@ a[href]:hover {
 /* Shared - Stroked text */
 .stroked {
 	/* text-shadow: rgba(0,0,0,0.5) 1px 0.05em; */
-	-webkit-text-stroke-width: 0.04em;
+	-webkit-text-stroke-width: 0.03em;
 	-webkit-text-stroke-color: black;
 }
 
