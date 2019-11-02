@@ -13,14 +13,14 @@
 	--brand-3a: #e462c2;
 	--brand-3b: #dc393f;
 	/* Font family */
-	--font-heading:   "Permanent Marker", sans-serif;
+	--font-heading:   "Staatliches", sans-serif;
 	--font-copy:      "Quicksand", sans-serif;
 	/* Font size */
 	--heading-small:   1.3rem;
 	--heading-medium:  1.6rem;
-	--heading-large:   2rem;
-	--heading-xlarge:  2.4rem;
-	--heading-xxlarge: 2.8rem;
+	--heading-large:   2.2rem;
+	--heading-xlarge:  2.6rem;
+	--heading-xxlarge: 3rem;
 	--heading-xxxlarge: 4rem;
 	/* Spacing */
 	--spacing-tiny:    0.5rem;
@@ -58,6 +58,7 @@ html {
 }
 h1, h2, h3 {
 	font-family: var(--font-heading);
+	font-weight: normal;
 }
 h1, h2 {
 	font-size: var(--heading-large);
@@ -87,7 +88,7 @@ h4, h5, h6 {
 a[href],
 a[href]:visited {
 	color: var(--brand-3a);
-	font-weight: bold;
+	/* font-weight: bold; */
 	/* font-family: var(--font-heading); */
 	text-decoration: underline;
 }
@@ -164,10 +165,11 @@ a[href]:hover {
 	padding: var(--spacing-tiny);
 	font-size: 1.2rem;
 	text-decoration: none;
-	-webkit-text-stroke-width: 0.03em;
+	-webkit-text-stroke-width: 0.04em;
 	-webkit-text-stroke-color: black;
 	color: var(--tone-0);
 	font-family: var(--font-heading);
+	font-weight: normal;
 }
 @media screen and (min-width:600px) {
 	.header__nav a[href] {
@@ -221,56 +223,51 @@ a[href]:hover {
 	min-height: 70vh;
 }
 
-.banner--intro__clouds--1a,
-.banner--intro__clouds--1b,
-.banner--intro__clouds--2a,
-.banner--intro__clouds--2b,
-.banner--intro__landscape--a,
-.banner--intro__landscape--b {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background-position: left center;
+.banner--intro__landscape,
+.banner--intro__clouds--1,
+.banner--intro__clouds--2 {
+	width: 200%;
+	position:absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	background-repeat: repeat-x;
+	background-position: bottom left;
 	background-size: 100% auto;
 }
-.banner--intro__clouds--1a,
-.banner--intro__clouds--1b {
-	background-image: url('static/img/bg-clouds2x2.png');
-	animation: animatedBackgroundA 30s linear infinite;
-	background-repeat: no-repeat;
+.banner--intro__landscape {
+	animation: bg-anim 20s linear infinite;
 }
-.banner--intro__clouds--1b {
-	animation: animatedBackgroundB 30s linear infinite;
+.banner--intro__clouds--1 {
+	background-image: url(static/img/bg-clouds2x2.png);
+	animation: bg-anim 30s linear infinite;
 }
-.banner--intro__clouds--2a,
-.banner--intro__clouds--2b {
-	background-image: url('static/img/bg-clouds2x3.png');
-	animation: animatedBackgroundA 40s linear infinite;
-	background-repeat: no-repeat;
+.banner--intro__clouds--2 {
+	background-image: url(static/img/bg-clouds2x3.png);
+	animation: bg-anim 40s linear infinite;
 }
-.banner--intro__clouds--2b {
-	animation: animatedBackgroundB 40s linear infinite;
+@media (max-width: 600px) {
+	.banner--intro__landscape {
+		background-image: url(static/img/bg-landscape-600x338.png);
+	}
 }
-.banner--intro__landscape--a,
-.banner--intro__landscape--b {
-	background-image: url('static/img/bg-landscape-2400x1350.png');
-	animation: animatedBackgroundA 14s linear infinite;
-	width: calc(100% + 1px);
-	background-position: left bottom;
-	background-repeat: no-repeat;
+@media (min-width: 601px) {
+	.banner--intro__landscape {
+		background-image: url(static/img/bg-landscape-1400x788.png);
+	}
 }
-.banner--intro__landscape--b {
-	animation: animatedBackgroundB 14s linear infinite;
-	width: 100%;
+@media (min-width: 1201px) {
+	.banner--intro__landscape {
+		background-image: url(static/img/bg-landscape-2400x1350.png);
+	}
 }
+
 .banner--intro__barrel {
-	content: "";
 	position: absolute;
 	top: 15%;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	/* transform: translateY(-50%); */
 	background-position: center center;
     background-size: 150% auto;
     background-repeat: no-repeat;
@@ -301,10 +298,6 @@ a[href]:hover {
 }
 .banner--our-story .banner__content p {
 	font-weight: bold;
-}
-.banner--our-story .strapline {
-	font-family: var(--font-copy);
-	font-weight: normal;
 }
 @media (max-width: 600px) {
 	.banner--our-story {
@@ -435,7 +428,6 @@ a[href]:hover {
 	margin-top: var(--spacing-small);
 	text-transform: uppercase;
 	font-size: var(--heading-xlarge);
-	font-weight:bolder;
 	line-height: 1;
 }
 .ciders__list li > p {
@@ -538,10 +530,6 @@ a[href]:hover {
 	left: 50%;
 	transform: translateX(-50%);
 }
-.banner--strapline .strapline {
-	font-family: var(--font-copy);
-	font-weight: normal;
-}
 @media (max-width: 600px) {
 	.banner--strapline {
 		background-image: url('static/img/against-the-grain-pint-pour-600x338.jpg');
@@ -575,13 +563,9 @@ a[href]:hover {
 }
 
 /* Shared - Animations */
-@keyframes animatedBackgroundA {
-	0% { transform: translateX(0); }
-	100% { transform: translateX(-100%); }
-}
-@keyframes animatedBackgroundB {
-	0% { transform: translateX(100%); }
-	100% { transform: translateX(0); }
+@-webkit-keyframes bg-anim {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
 }
 @keyframes animatedUpDown {
 	0% { transform: translateY(0); }
@@ -591,7 +575,7 @@ a[href]:hover {
 /* Shared - Stroked text */
 .stroked {
 	/* text-shadow: rgba(0,0,0,0.5) 1px 0.05em; */
-	-webkit-text-stroke-width: 0.03em;
+	-webkit-text-stroke-width: 0.04em;
 	-webkit-text-stroke-color: black;
 }
 
