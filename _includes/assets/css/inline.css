@@ -261,37 +261,6 @@ a[href]:hover {
 		background-image: url(static/img/bg-landscape-2400x1350.png);
 	}
 }
-/* Attempt to fix iOS orientation change */
-		@media only screen and (orientation: landscape) and (max-width: 600px) {
-			.banner--intro__landscape {
-				background-image: url(static/img/bg-landscape-600x338.png);
-			}
-		}
-		@media only screen and (orientation: landscape) and (min-width: 601px) {
-			.banner--intro__landscape {
-				background-image: url(static/img/bg-landscape-1400x788.png);
-			}
-		}
-		@media only screen and (orientation: landscape) and (min-width: 1201px) {
-			.banner--intro__landscape {
-				background-image: url(static/img/bg-landscape-2400x1350.png);
-			}
-		}
-		@media only screen and (orientation: portrait) and (max-width: 600px) {
-			.banner--intro__landscape {
-				background-image: url(static/img/bg-landscape-600x338.png);
-			}
-		}
-		@media only screen and (orientation: portrait) and (min-width: 601px) {
-			.banner--intro__landscape {
-				background-image: url(static/img/bg-landscape-1400x788.png);
-			}
-		}
-		@media only screen and (orientation: portrait) and (min-width: 1201px) {
-			.banner--intro__landscape {
-				background-image: url(static/img/bg-landscape-2400x1350.png);
-			}
-		}
 
 .banner--intro__barrel {
 	position: absolute;
@@ -402,7 +371,7 @@ a[href]:hover {
     box-shadow: 0 3px 8px #000;
 }
 .ciders__list li {
-	max-width: 60vw;
+	max-width: 80vw;
 	width: 400px;
 	margin-bottom: 4em;
 }
@@ -416,11 +385,19 @@ a[href]:hover {
 	display: block;
 	overflow: hidden;
 	box-shadow: 0 -1px 3px 1px #888;
+	max-width: 250px;
+	margin-left: auto;
+	margin-right: auto;
 }
 .ciders__list-image img {
 	display: block;
 	width: 100%;
 	height: auto;
+}
+@media (min-width: 600px) {
+	.ciders__list-image {
+		max-width: none;
+	}
 }
 @media (min-width: 900px) {
 	.ciders__list	 {
