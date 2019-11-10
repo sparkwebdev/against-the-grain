@@ -163,7 +163,7 @@ a[href]:hover {
 .header__nav a[href] {
 	display: inline-block;
 	padding: var(--spacing-tiny);
-	font-size: 1.2rem;
+	font-size: 1.35rem;
 	text-decoration: none;
 	-webkit-text-stroke-width: 0.04em;
 	-webkit-text-stroke-color: black;
@@ -220,7 +220,7 @@ a[href]:hover {
 	background-image: url('static/img/bg-sky.jpg');
 	padding-top: 56.25%;
 	position: relative;
-	min-height: 70vh;
+	min-height: 60vh;
 }
 
 .banner--intro__landscape,
@@ -261,6 +261,37 @@ a[href]:hover {
 		background-image: url(static/img/bg-landscape-2400x1350.png);
 	}
 }
+/* Attempt to fix iOS orientation change */
+		@media only screen and (orientation: landscape) and (max-width: 600px) {
+			.banner--intro__landscape {
+				background-image: url(static/img/bg-landscape-600x338.png);
+			}
+		}
+		@media only screen and (orientation: landscape) and (min-width: 601px) {
+			.banner--intro__landscape {
+				background-image: url(static/img/bg-landscape-1400x788.png);
+			}
+		}
+		@media only screen and (orientation: landscape) and (min-width: 1201px) {
+			.banner--intro__landscape {
+				background-image: url(static/img/bg-landscape-2400x1350.png);
+			}
+		}
+		@media only screen and (orientation: portrait) and (max-width: 600px) {
+			.banner--intro__landscape {
+				background-image: url(static/img/bg-landscape-600x338.png);
+			}
+		}
+		@media only screen and (orientation: portrait) and (min-width: 601px) {
+			.banner--intro__landscape {
+				background-image: url(static/img/bg-landscape-1400x788.png);
+			}
+		}
+		@media only screen and (orientation: portrait) and (min-width: 1201px) {
+			.banner--intro__landscape {
+				background-image: url(static/img/bg-landscape-2400x1350.png);
+			}
+		}
 
 .banner--intro__barrel {
 	position: absolute;
@@ -371,7 +402,7 @@ a[href]:hover {
     box-shadow: 0 3px 8px #000;
 }
 .ciders__list li {
-	max-width: 80vw;
+	max-width: 60vw;
 	width: 400px;
 	margin-bottom: 4em;
 }
@@ -581,9 +612,12 @@ a[href]:hover {
 
 /* Shared - Strapline */
 .strapline {
-	font-size: var(--heading-medium);
-	margin: 0;
-	line-height: 1.1;
+    font-size: 8vw;
+}
+@media screen and (min-width:6480px) {
+	.strapline {
+		font-size: var(--heading-large);
+	}
 }
 @media screen and (min-width:600px) {
 	.strapline {
