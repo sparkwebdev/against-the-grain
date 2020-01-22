@@ -10,7 +10,7 @@
 	--brand-1a: #df910a;
 	--brand-2b: #3a9472;
 	--brand-2a: #7321b2;
-	--brand-3a: #e462c2;
+	--brand-3a: #FBBF05;
 	--brand-3b: #dc393f;
 	/* Font family */
 	--font-heading:   "bernhard-gothic-urw", sans-serif;
@@ -308,7 +308,7 @@ a[href]:hover {
 		background-image: url('static/img/against-the-grain-jono-conor-1400x788.jpg');
 	}
 }
-@media (min-width: 1000px) {
+/* @media (min-width: 1000px) {
 	.banner--our-story {
 		overflow: hidden;
 		box-shadow: inset 0 50px 50px #000;
@@ -331,12 +331,12 @@ a[href]:hover {
 		top: calc(-1 * var(--spacing-large));
 		z-index: -1;
 	}
-}
+} */
 @media (min-width: 1200px) {
-	.banner--our-story {
+	/*.banner--our-story {
 		background-size: 1200px auto;
 		padding-top: 1001px;
-	}
+	}*/
 	.banner--our-story .banner__content p {
 		font-size: 1.1rem;
 	}
@@ -481,6 +481,11 @@ a[href]:hover {
 }
 @media (min-width: 768px) {
 	.ciders__list-title {
+		font-size: var(--heading-large);
+	}
+}
+@media (min-width: 1200px) {
+	.ciders__list-title {
 		font-size: var(--heading-xxlarge);
 	}
 }
@@ -494,7 +499,6 @@ a[href]:hover {
 .ciders__list-product--hippie-tripper .ciders__list-image  {
 	background: linear-gradient(to top right, var(--brand-3a), var(--brand-3a) 30%, var(--brand-3b) 100%);
 }
-
 
 
 /* Banner - Strapline */
