@@ -19,6 +19,30 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Permalink", name: "permalink", widget: "string" }
       - { label: "Navigation Title", name: "navtitle", widget: "string" }
+      - { label: "classname1: "classname1", widget: "string" }
+      - { label: "image1", name: "image1", widget: "string" }
+      - { label: "imageAlt1", name: "imageAlt1", widget: "string" }
+      - { label: "title1", name: "title1", widget: "string" }
+      - { label: "subtitle1", name: "subtitle1", widget: "string" }
+      - { label: "info1", name: "info1", widget: "string" }
+      - { label: "description1", name: "description1", widget: "string" }
+      - { label: "smallprint1", name: "smallprint1", widget: "string" }
+      - { label: "classname2", name: "classname2", widget: "string" }
+      - { label: "image2", name: "image2", widget: "string" }
+      - { label: "imageAlt2", name: "imageAlt2", widget: "string" }
+      - { label: "title2", name: "title2", widget: "string" }
+      - { label: "subtitle2", name: "subtitle2", widget: "string" }
+      - { label: "info2", name: "info2", widget: "string" }
+      - { label: "description2", name: "description2", widget: "string" }
+      - { label: "smallprint2", name: "smallprint2", widget: "string" }
+      - { label: "classname3", name: "classname3", widget: "string" }
+      - { label: "image3", name: "image3", widget: "string" }
+      - { label: "imageAlt3", name: "imageAlt3", widget: "string" }
+      - { label: "title3", name: "title3", widget: "string" }
+      - { label: "subtitle3", name: "subtitle3", widget: "string" }
+      - { label: "info3", name: "info3", widget: "string" }
+      - { label: "description3", name: "description3", widget: "string" }
+      - { label: "smallprint3", name: "smallprint3", widget: "string" }
       - { label: "Strapline", name: "strapline", widget: "string" }
       - { label: "Story Strapline", name: "storyStrapline", widget: "string" }
       - { label: "Story Content", name: "storyContent", widget: "string" }

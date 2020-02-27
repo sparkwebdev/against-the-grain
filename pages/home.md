@@ -18,38 +18,30 @@ menu: [
     "title": "Story"
   }
 ]
-ciders: [
-  {
-    "classname":  "laid-back-lumberjack",
-    "image": "laid-back-lumberjack-product-image-against-the-grain.png",
-    "imageAlt": "Laid-back Lumberjack",
-    "title": "Laid-back <br />Lumberjack",
-    "subtitle": "Original session <br />cider",
-    "info": "4.1% ABV",
-    "description": "Medium dry apple cider, <strong>bright gold</strong> colour. <strong>Full bodied</strong> and deep, clear cider with just a <strong>hint of sweetness</strong>.",
-    "smallprint": "<strong><small>Available in:</small> <br />30L Dolium Keg (Sankey S- type)</strong>"
-  },
-  {
-    "classname": "gypsys-kiss",
-    "image": "gypsys-kiss-product-image-against-the-grain.png",
-    "imageAlt": "Gypsy’s Kiss logo",
-    "title": "Gypsy’s <br />Kiss",
-    "subtitle": "Dry hopped <br />cider",
-    "info": "5.0% ABV",
-    "description": "Dry-hopped cider, <strong>golden colour</strong>. Complex cider dry-hopped with Crystal hops, adding <strong>piney, floral and spicy</strong> notes.",
-    "smallprint": "<strong><small>Available in:</small> <br />30L Dolium Keg (Sankey S- type)</strong>"
-  },
-  {
-    "classname": "hippie-tripper",
-    "image": "hippie-tripper-product-image-against-the-grain.png",
-    "imageAlt": "Hippie Tripper logo",
-    "title": "Hippie <br />Tripper",
-    "subtitle": "Cherry and <br />Pomegranate cider",
-    "info": "4.0% ABV",
-    "description": "<strong>Medium fruited</strong> cider, light pink colour. Light and sparkling, with delicious <strong>fruity overtones</strong>.",
-    "smallprint": "<strong><small>Available in:</small> <br />30L Dolium Keg (Sankey S- type)</strong>"
-  },
-]
+classname1: "laid-back-lumberjack"
+image1: "laid-back-lumberjack-product-image-against-the-grain.png"
+imageAlt1: "Laid-back Lumberjack"
+title1: "Laid-back <br />Lumberjack"
+subtitle1: "Original session <br />cider"
+info1: "4.1% ABV"
+description1: "Medium dry apple cider, <strong>bright gold</strong> colour. <strong>Full bodied</strong> and deep, clear cider with just a <strong>hint of sweetness</strong>."
+smallprint1: "<strong><small>Available in:</small> <br />30L Dolium Keg (Sankey S- type)</strong>"
+classname2: "gypsys-kiss"
+image2: "gypsys-kiss-product-image-against-the-grain.png"
+imageAlt2: "Gypsy’s Kiss logo"
+title2: "Gypsy’s <br />Kiss"
+subtitle2: "Dry hopped <br />cider"
+info2: "5.0% ABV"
+description2: "Dry-hopped cider, <strong>golden colour</strong>. Complex cider dry-hopped with Crystal hops, adding <strong>piney, floral and spicy</strong> notes."
+smallprint2: "<strong><small>Available in:</small> <br />30L Dolium Keg (Sankey S- type)</strong>"
+classname3: "hippie-tripper"
+image3: "hippie-tripper-product-image-against-the-grain.png"
+imageAlt3: "Hippie Tripper logo"
+title3: "Hippie <br />Tripper"
+subtitle3: "Cherry and <br />Pomegranate cider"
+info3: "4.0% ABV"
+description3: "<strong>Medium fruited</strong> cider, light pink colour. Light and sparkling, with delicious <strong>fruity overtones</strong>."
+smallprint3: "<strong><small>Available in:</small> <br />30L Dolium Keg (Sankey S- type)</strong>"
 storyStrapline: "Our Story"
 storyContent: "<p>Jono’s love for brewing and cider making goes back over a decade, with three years’ experience following his passion as a professional brewer.</p><p>However, his West Country roots, and the lack of interesting cider in London, drove him to pack-in the grain and strike out on his own.</p><p>Well, not on his own.</p><p>Conor comes from an entrepreneurial background working within the catering industry and, over quite a few pints with Jono, got pretty excited about changing the face of London’s cider.</p><p>After the hangover, they teamed up to create Against The Grain, a micro-cidery based in South West London. Crafting exciting and innovative new-age ciders, they aim to propel the world of cider to new heights.</p>"
 bannerStrapline: "See&nbsp;it. Taste&nbsp;it. Stock&nbsp;it. <br />Tell&nbsp;everyone about&nbsp;it."
@@ -96,16 +88,30 @@ copyright: "© Against the Grain 2019"
 
 <section class="ciders" id="ciders">
 <ul class="ciders__list">
-{% for cider in ciders %}
-  <li class="ciders__list-product ciders__list-product--{{cider.classname}}">
-  <div class="ciders__list-image"><img width="600" height="600" src="static/img/{{cider.image}}" alt="{{cider.title}} logo" /></div>
-  <h3 class="ciders__list-title stroked">{{cider.title}}</h3>
-  <h4 class="ciders__list-subtitle">{{cider.subtitle}}</h4>
-  <h4 class="ciders__list-subtitle">{{cider.info}}</h4>
-  <p class="ciders__description">{{cider.description}}</p>
-  <p>{{cider.smallprint}}</p>
+<li class="ciders__list-product ciders__list-product--{{classname1}}">
+  <div class="ciders__list-image"><img width="600" height="600" src="static/img/{{image1}}" alt="{{title1}} logo" /></div>
+  <h3 class="ciders__list-title stroked">{{title1}}</h3>
+  <h4 class="ciders__list-subtitle">{{subtitle1}}</h4>
+  <h4 class="ciders__list-subtitle">{{info1}}</h4>
+  <p class="ciders__description">{{description1}}</p>
+  <p>{{smallprint1}}</p>
 </li>
-{% endfor %}
+<li class="ciders__list-product ciders__list-product--{{classname2}}">
+  <div class="ciders__list-image"><img width="600" height="600" src="static/img/{{image2}}" alt="{{title2}} logo" /></div>
+  <h3 class="ciders__list-title stroked">{{title2}}</h3>
+  <h4 class="ciders__list-subtitle">{{subtitle2}}</h4>
+  <h4 class="ciders__list-subtitle">{{info2}}</h4>
+  <p class="ciders__description">{{description2}}</p>
+  <p>{{smallprint2}}</p>
+</li>
+<li class="ciders__list-product ciders__list-product--{{classname3}}">
+  <div class="ciders__list-image"><img width="600" height="600" src="static/img/{{image3}}" alt="{{title3}} logo" /></div>
+  <h3 class="ciders__list-title stroked">{{title3}}</h3>
+  <h4 class="ciders__list-subtitle">{{subtitle3}}</h4>
+  <h4 class="ciders__list-subtitle">{{info3}}</h4>
+  <p class="ciders__description">{{description3}}</p>
+  <p>{{smallprint3}}</p>
+</li>
 </ul>
 </section>
 
