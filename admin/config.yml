@@ -19,7 +19,7 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Permalink", name: "permalink", widget: "string" }
       - { label: "Navigation Title", name: "navtitle", widget: "string" }
-      - { label: "classname1: "classname1", widget: "string" }
+      - { label: "classname1", name: "classname1", widget: "string" }
       - { label: "image1", name: "image1", widget: "string" }
       - { label: "imageAlt1", name: "imageAlt1", widget: "string" }
       - { label: "title1", name: "title1", widget: "string" }
