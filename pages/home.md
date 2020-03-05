@@ -1,68 +1,80 @@
 ---
-layout: layouts/home.njk
 title: Against the Grain - London Cider
+date: 2020-03-05T11:11:10.090Z
 permalink: /
 navtitle: Home
-strapline: "Inspired cider for London"
-menu: [
-  {
-    "id": "header",
-    "title": "Home"
-  },
-  {
-    "id": "ciders",
-    "title": "Ciders"
-  },
-  {
-    "id": "story",
-    "title": "Story"
-  }
-]
-classname1: "laid-back-lumberjack"
-image1: "laid-back-lumberjack-product-image-against-the-grain.png"
-imageAlt1: "Laid-back Lumberjack"
-title1: "Laid-back <br />Lumberjack"
-subtitle1: "Original session <br />cider"
-info1: "4.1% ABV"
-description1: "Medium dry apple cider, <strong>bright gold</strong> colour. <strong>Full bodied</strong> and deep, clear cider with just a <strong>hint of sweetness</strong>."
-smallprint1: "<strong><small>Available in:</small> <br />30L Dolium Keg (Sankey S- type)</strong>"
-classname2: "gypsys-kiss"
-image2: "gypsys-kiss-product-image-against-the-grain.png"
-imageAlt2: "Gypsy’s Kiss logo"
-title2: "Gypsy’s <br />Kiss"
-subtitle2: "Dry hopped <br />cider"
-info2: "5.0% ABV"
-description2: "Dry-hopped cider, <strong>golden colour</strong>. Complex cider dry-hopped with Crystal hops, adding <strong>piney, floral and spicy</strong> notes."
-smallprint2: "<strong><small>Available in:</small> <br />30L Dolium Keg (Sankey S- type)</strong>"
-classname3: "hippie-tripper"
-image3: "hippie-tripper-product-image-against-the-grain.png"
-imageAlt3: "Hippie Tripper logo"
-title3: "Hippie <br />Tripper"
-subtitle3: "Cherry and <br />Pomegranate cider"
-info3: "4.0% ABV"
-description3: "<strong>Medium fruited</strong> cider, light pink colour. Light and sparkling, with delicious <strong>fruity overtones</strong>."
-smallprint3: "<strong><small>Available in:</small> <br />30L Dolium Keg (Sankey S- type)</strong>"
-storyStrapline: "Our Story"
-storyContent: "<p>Jono’s love for brewing and cider making goes back over a decade, with three years’ experience following his passion as a professional brewer.</p><p>However, his West Country roots, and the lack of interesting cider in London, drove him to pack-in the grain and strike out on his own.</p><p>Well, not on his own.</p><p>Conor comes from an entrepreneurial background working within the catering industry and, over quite a few pints with Jono, got pretty excited about changing the face of London’s cider.</p><p>After the hangover, they teamed up to create Against The Grain, a micro-cidery based in South West London. Crafting exciting and innovative new-age ciders, they aim to propel the world of cider to new heights.</p>"
-bannerStrapline: "See&nbsp;it. Taste&nbsp;it. Stock&nbsp;it. <br />Tell&nbsp;everyone about&nbsp;it."
-email: "jono@againstthegraincidery.co.uk"
-address: "25 Summerstown<br />London, SW17 0BQ"
-telephone: "07411 847 663"
-socialLinks: [
-  {
-    "url": "https://www.facebook.com/AgainstTheGrainCidery/",
-    "title": "Facebook"
-  },
-  {
-    "url": "https://www.instagram.com/againstthegraincidery/",
-    "title": "Instagram"
-  },
-  {
-    "url": "https://twitter.com/ATGcidery",
-    "title": "Twitter"
-  }
-]
-copyright: "© Against the Grain 2019"
+classname1: laid-back-lumberjack
+image1: laid-back-lumberjack-product-image-against-the-grain.png
+imageAlt1: Laid-back Lumberjack
+title1: Laid-back <br />Lumberjack
+subtitle1: Original session <br />cider
+info1: 4.1% ABV
+description1: >-
+  Medium dry apple cider, <strong>bright gold</strong> colour. <strong>Full
+  bodied</strong> and deep, clear cider with just a <strong>hint of
+  sweetness</strong>.
+smallprint1: >-
+  <strong><small>Available in:</small> <br />30L Dolium Keg (Sankey S-
+  type)</strong>
+classname2: gypsys-kiss
+image2: gypsys-kiss-product-image-against-the-grain.png
+imageAlt2: Gypsy’s Kiss logo
+title2: Gypsy’s <br />Kiss
+subtitle2: Dry hopped <br />cider
+info2: 5.0% ABV
+description2: >-
+  Dry-hopped cider, <strong>golden colour</strong>. Complex dry-hopped cider,
+  adding <strong>piney, floral and spicy</strong> notes.
+smallprint2: >-
+  <strong><small>Available in:</small> <br />30L Dolium Keg (Sankey S-
+  type)</strong>
+classname3: hippie-tripper
+image3: hippie-tripper-product-image-against-the-grain.png
+imageAlt3: Hippie Tripper logo
+title3: Hippie <br />Tripper
+subtitle3: Cherry and <br />Pomegranate cider
+info3: 4.0% ABV
+description3: >-
+  <strong>Medium fruited</strong> cider, light gold colour. Light and sparkling,
+  with delicious <strong>fruity overtones</strong>.
+smallprint3: >-
+  <strong><small>Available in:</small> <br />30L Dolium Keg (Sankey S-
+  type)</strong>
+strapline: Inspired cider for London
+storyStrapline: Our Story
+storyContent: >-
+  <p>Jono’s love for brewing and cider making goes back over a decade, with
+  three years’ experience following his passion as a qualified professional
+  brewer.</p><p>However, his West Country roots, and the lack of interesting
+  cider in London, drove him to pack-in the grain and strike out on his
+  own.</p><p>Well, not on his own.</p><p>Conor comes from an entrepreneurial
+  background working within the catering industry and, over quite a few pints
+  with Jono, got pretty excited about changing the face of London’s
+  cider.</p><p>After the hangover, they teamed up to create Against The Grain, a
+  micro-cidery based in South West London. Crafting exciting and innovative
+  new-age ciders, they aim to propel the world of cider to new heights.</p>
+bannerStrapline: >-
+  See&nbsp;it. Taste&nbsp;it. Stock&nbsp;it. <br />Tell&nbsp;everyone
+  about&nbsp;it.
+email: jono@againstthegraincidery.co.uk
+telephone: 07411 847 663
+copyright: © Against the Grain 2019
+layout: layouts/home.njk
+socialLinks:
+  - url: 'https://www.facebook.com/AgainstTheGrainCidery/'
+    title: Facebook
+  - url: 'https://www.instagram.com/againstthegraincidery/'
+    title: Instagram
+  - url: 'https://twitter.com/ATGcidery'
+    title: Twitter
+address: '25 Summerstown<br />London, SW17 0BQ'
+menu:
+  - id: header
+    title: Home
+  - id: ciders
+    title: Ciders
+  - id: story
+    title: Story
 ---
 
 <header id="header" class="header">
