@@ -41,6 +41,10 @@ smallprint3: >-
   <strong><small>Available in:</small> <br />30L Dolium Keg (Sankey S-
   type)</strong>
 strapline: Inspired cider for London
+announcement: NEW!! Buy our products direct from...
+announcement-btn: Buy now!
+announcement-link: https://craftynectar.com/products/laid-back-lumberjack-x4-440ml-cans
+announcement-stock: Want to stock us commercially?
 storyStrapline: Our Story
 storyContent: >-
   <p>Jono’s love for brewing and cider making goes back over a decade, with
@@ -96,6 +100,13 @@ menu:
   <div class="banner__content">
     <h2 class="strapline stroked">{{strapline}}</h2>
   </div>
+</section>
+
+<section class="banner-announcement">
+    <h3>{{announcement}}</h3>
+    <img src="static/img/crafty-nectar-logo.png" />
+    <p><a class="btn" href="{{announcement-link}}" target="_blank">{{announcement-btn}}</a></p>
+    <p>{{announcement-stock}} <a href="mailto:{{email}}">Contact us</a> now.</p>
 </section>
 
 <section class="ciders" id="ciders">

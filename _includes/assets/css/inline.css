@@ -22,11 +22,13 @@
 	--heading-xlarge:  2.6rem;
 	--heading-xxlarge: 3rem;
 	--heading-xxxlarge: 4rem;
+	--heading-xxxxlarge: 5rem;
 	/* Spacing */
 	--spacing-tiny:    0.5rem;
 	--spacing-small:   1rem;
 	--spacing-medium:  2rem;
 	--spacing-large:   3rem;
+	--spacing-xlarge:  4rem;
 	/* Layout */
 	--container-width: 56rem;
 	--container-width-wide: 90rem;
@@ -344,16 +346,47 @@ a[href]:hover {
 }
 
 
-/* Ciders */
-.ciders {
+/* Announcement Banner */
+.banner-announcement {
+	text-align: center;
     position: relative;
-    z-index: 1;
-	margin-top: -6rem;
+	z-index: 1;
+	padding: var(--spacing-large) var(--spacing-medium);
+	font-size: var(--heading-medium);
+	font-weight: bold;
 }
+.banner-announcement h3 {
+	font-size: var(--heading-xxlarge);
+	line-height: 1.2;
+	margin-bottom: var(--spacing-small)
+}
+.banner-announcement * {
+	margin: 0;
+}
+.banner-announcement .btn {
+	margin: var(--heading-medium) 0;
+}
+
+
+a.btn[href],
+a.btn[href]:visited {
+	display: inline-block;
+	padding: var(--spacing-small) var(--spacing-large);
+	background: var(--brand-3a);
+	color: var(--tone-100);
+	text-decoration: none;
+}
+.banner-announcement a[href],
+.banner-announcement a[href]:visited {
+	color: var(--tone-100);
+}
+
+
+/* Ciders */
 .ciders__list {
 	list-style: none;
 	padding: 0 var(--spacing-medium) var(--spacing-large) var(--spacing-medium);
-	margin: 6rem auto 0 auto;
+	margin: 0 auto;
 	max-width: var(--container-width-wide);
 	text-align: center;
 	display: flex;
@@ -361,23 +394,12 @@ a[href]:hover {
 	flex-direction: column;
 	z-index: 1;
 }
-.ciders__list:before {
-	content: "";
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-    box-shadow: 0 3px 8px #000;
-}
 .ciders__list li {
 	max-width: 80vw;
 	width: 400px;
 	margin-bottom: 4em;
 }
 .ciders__list li:first-child {
-	position: relative;
-	top: -4rem;
 	margin-bottom: 0;
 }
 .ciders__list-image {
@@ -407,9 +429,6 @@ a[href]:hover {
 	}
 	.ciders__list li {
 		width: 30%;
-		position: relative;
-		top: -4rem;
-		margin-bottom: -4rem;
 		padding: 0;
 		max-width: 480px;
 	}
@@ -615,6 +634,12 @@ a[href]:hover {
 	.strapline {
 		letter-spacing: -0.01em;
 		font-size: var(--heading-xxxlarge);
+	}
+}
+@media screen and (min-width:1400px) {
+	.strapline {
+		letter-spacing: -0.01em;
+		font-size: var(--heading-xxxxlarge);
 	}
 }
 
