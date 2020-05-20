@@ -9,69 +9,61 @@ imageAlt1: Laid-back Lumberjack
 title1: Laid-back <br />Lumberjack
 subtitle1: Original session <br />cider
 info1: 4.1% ABV
-description1: >-
-  Medium dry apple cider, <strong>bright gold</strong> colour. <strong>Full
-  bodied</strong> and deep, clear cider with just a <strong>hint of
+description1: Medium dry apple cider, <strong>bright gold</strong> colour.
+  <strong>Full bodied</strong> and deep, clear cider with just a <strong>hint of
   sweetness</strong>.
-smallprint1: >-
-  <strong><small>Available in:</small> <br />30L Dolium Keg (Sankey S-
-  type)</strong>
+smallprint1: <strong><small>Available in:</small> <br />30L Dolium Keg (Sankey
+  S- type)</strong>
 classname2: gypsys-kiss
 image2: gypsys-kiss-product-image-against-the-grain.png
 imageAlt2: Gypsy’s Kiss logo
 title2: Gypsy’s <br />Kiss
 subtitle2: Dry hopped <br />cider
 info2: 5.0% ABV
-description2: >-
-  Dry-hopped cider, <strong>golden colour</strong>. Complex dry-hopped cider,
-  adding <strong>piney, floral and spicy</strong> notes.
-smallprint2: >-
-  <strong><small>Available in:</small> <br />30L Dolium Keg (Sankey S-
-  type)</strong>
+description2: Dry-hopped cider, <strong>golden colour</strong>. Complex
+  dry-hopped cider, adding <strong>piney, floral and spicy</strong> notes.
+smallprint2: <strong><small>Available in:</small> <br />30L Dolium Keg (Sankey
+  S- type)</strong>
 classname3: hippie-tripper
 image3: hippie-tripper-product-image-against-the-grain.png
 imageAlt3: Hippie Tripper logo
 title3: Hippie <br />Tripper
 subtitle3: Cherry and <br />Pomegranate cider
 info3: 4.0% ABV
-description3: >-
-  <strong>Medium fruited</strong> cider, light gold colour. Light and sparkling,
-  with delicious <strong>fruity overtones</strong>.
-smallprint3: >-
-  <strong><small>Available in:</small> <br />30L Dolium Keg (Sankey S-
-  type)</strong>
+description3: <strong>Medium fruited</strong> cider, light gold colour. Light
+  and sparkling, with delicious <strong>fruity overtones</strong>.
+smallprint3: <strong><small>Available in:</small> <br />30L Dolium Keg (Sankey
+  S- type)</strong>
 strapline: Inspired cider for London
 announcement: NEW!! Buy our products direct from...
 announcement-btn: Buy now!
-announcement-link: https://craftynectar.com/products/laid-back-lumberjack-x4-440ml-cans
+announcement-link: https://craftynectar.com/products/laid-back-lumberjack-x8-cans-440ml?_pos=2&_sid=75c48d328&_ss=r
 announcement-stock: Want to stock us commercially?
 storyStrapline: Our Story
-storyContent: >-
-  <p>Jono’s love for brewing and cider making goes back over a decade, with
-  three years’ experience following his passion as a qualified professional
-  brewer.</p><p>However, his West Country roots, and the lack of interesting
-  cider in London, drove him to pack-in the grain and strike out on his
-  own.</p><p>Well, not on his own.</p><p>Conor comes from an entrepreneurial
+storyContent: <p>Jono’s love for brewing and cider making goes back over a
+  decade, with three years’ experience following his passion as a qualified
+  professional brewer.</p><p>However, his West Country roots, and the lack of
+  interesting cider in London, drove him to pack-in the grain and strike out on
+  his own.</p><p>Well, not on his own.</p><p>Conor comes from an entrepreneurial
   background working within the catering industry and, over quite a few pints
   with Jono, got pretty excited about changing the face of London’s
   cider.</p><p>After the hangover, they teamed up to create Against The Grain, a
   micro-cidery based in South West London. Crafting exciting and innovative
   new-age ciders, they aim to propel the world of cider to new heights.</p>
-bannerStrapline: >-
-  See&nbsp;it. Taste&nbsp;it. Stock&nbsp;it. <br />Tell&nbsp;everyone
-  about&nbsp;it.
+bannerStrapline: See&nbsp;it. Taste&nbsp;it. Stock&nbsp;it. <br
+  />Tell&nbsp;everyone about&nbsp;it.
 email: jono@againstthegraincidery.co.uk
+address: 25 Summerstown<br />London, SW17 0BQ
 telephone: 07411 847 663
 copyright: © Against the Grain 2019
 layout: layouts/home.njk
 socialLinks:
-  - url: 'https://www.facebook.com/AgainstTheGrainCidery/'
+  - url: https://www.facebook.com/AgainstTheGrainCidery/
     title: Facebook
-  - url: 'https://www.instagram.com/againstthegraincidery/'
+  - url: https://www.instagram.com/againstthegraincidery/
     title: Instagram
-  - url: 'https://twitter.com/ATGcidery'
+  - url: https://twitter.com/ATGcidery
     title: Twitter
-address: '25 Summerstown<br />London, SW17 0BQ'
 menu:
   - id: header
     title: Home
