@@ -44,6 +44,10 @@ collections:
       - { label: "description3", name: "description3", widget: "string" }
       - { label: "smallprint3", name: "smallprint3", widget: "string" }
       - { label: "Strapline", name: "strapline", widget: "string" }
+      - { label: "Announcement", name: "announcement", widget: "string" }
+      - { label: "Announcement Button", name: "announcement-btn", widget: "string" }
+      - { label: "Announcement Link", name: "announcement-link", widget: "string" }
+      - { label: "Announcement Stock", name: "announcement-stock", widget: "string" }
       - { label: "Story Strapline", name: "storyStrapline", widget: "string" }
       - { label: "Story Content", name: "storyContent", widget: "string" }
       - { label: "Banner Strapline", name: "bannerStrapline", widget: "string" }
